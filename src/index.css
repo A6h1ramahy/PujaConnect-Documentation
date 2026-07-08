@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+@layer base {
+  :root {
+    --color-bg:      #FFFBF5;
+    --color-surface: #FFF5E8;
+    --color-text:    #1C1917;
+    --color-muted:   #78716C;
+  }
+
+  .dark {
+    --color-bg:      #12070A;
+    --color-surface: #1E0E14;
+    --color-text:    #F5F0EB;
+    --color-muted:   #A08070;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-light-bg dark:bg-dark-bg text-stone-900 dark:text-stone-100 font-sans transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-saffron-400 rounded-full; }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/80 dark:bg-dark-surface/85 backdrop-blur-md border border-light-border/60 dark:border-dark-border/50;
+  }
+  .glass-card {
+    @apply bg-white/60 dark:bg-dark-card/65 backdrop-blur-md border border-light-border/50 dark:border-dark-border/40 shadow-card-light dark:shadow-card-dark;
+  }
+  .saffron-glow {
+    @apply shadow-glow-saffron;
+  }
+}
