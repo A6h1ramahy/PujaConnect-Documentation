@@ -63,13 +63,3 @@ npm run build
 ```
 
 ---
-
-## 📦 Deployment to Vercel
-
-This repository is ready to deploy directly to Vercel. 
-
-### Build Configuration:
-- **Build Command:** `npm run build`
-- **Output Directory:** `dist`
-- **Install Command:** `npm install`
-- **Routing Support:** The repository includes a `vercel.json` rewrite file to ensure page reloads function correctly when using client-side `BrowserRouter`.
