@@ -249,7 +249,8 @@ const toc = [
   ['future-enhancements', '25. Future Enhancements'],
   ['challenges-faced', '26. Challenges Faced'],
   ['conclusion', '27. Conclusion'],
-  ['screenshots', '28. Project Screenshots Guide']
+  ['screenshots', '28. Project Screenshots Guide'],
+  ['access-credentials', '29. Access Credentials']
 ];
 
 toc.forEach(([id, title]) => {
@@ -1038,6 +1039,42 @@ screenshotsList.forEach((item, idx) => {
     doc.moveDown(1);
   }
 });
+
+// ──────────────────────────────────────────────────────────────────────────
+// SECTION: 29. ACCESS CREDENTIALS
+// ──────────────────────────────────────────────────────────────────────────
+addChapterTitle("access-credentials", "29. Access Credentials");
+
+doc.font('Helvetica').fontSize(11).fillColor(TEXT_COLOR);
+doc.text(
+  'Keep these credentials for reference. The pandit email pattern is pandit(number)@pujaconnect.com, where any number from 1 to 500 can replace the number part. Example: pandit500@pujaconnect.com.',
+  { lineGap: 1.2, align: 'left' }
+);
+
+doc.moveDown(0.7);
+const credentialsBoxX = 60;
+const credentialsBoxW = 475;
+const credentialsBoxY = doc.y;
+const credentialsBoxH = 128;
+doc.roundedRect(credentialsBoxX, credentialsBoxY, credentialsBoxW, credentialsBoxH).fillAndStroke('#FFF7ED', '#FDBA74');
+
+doc.fillColor(SECONDARY_COLOR).font('Helvetica-Bold').fontSize(11);
+doc.text('Admin Account', credentialsBoxX + 18, credentialsBoxY + 14);
+doc.fillColor(TEXT_COLOR).font('Helvetica').fontSize(10.5);
+doc.text('Mail: admin@pujaconnect.com', credentialsBoxX + 18, credentialsBoxY + 34);
+doc.text('Password: Admin@123', credentialsBoxX + 18, credentialsBoxY + 50);
+
+doc.moveTo(credentialsBoxX + 18, credentialsBoxY + 72).lineTo(credentialsBoxX + credentialsBoxW - 18, credentialsBoxY + 72).strokeColor('#FCD34D').lineWidth(0.75).stroke();
+
+doc.fillColor(SECONDARY_COLOR).font('Helvetica-Bold').fontSize(11);
+doc.text('Pandit Account', credentialsBoxX + 18, credentialsBoxY + 82);
+doc.fillColor(TEXT_COLOR).font('Helvetica').fontSize(10.5);
+doc.text('Mail: pandit(number)@pujaconnect.com', credentialsBoxX + 18, credentialsBoxY + 102);
+doc.text('Password: Pandit@123', credentialsBoxX + 18, credentialsBoxY + 118);
+
+doc.fillColor(MUTED_COLOR).font('Helvetica').fontSize(9.5);
+doc.text('Example: pandit500@pujaconnect.com', credentialsBoxX + 260, credentialsBoxY + 118, { align: 'left' });
+doc.fillColor(TEXT_COLOR).font('Helvetica').fontSize(12);
 
 // ──────────────────────────────────────────────────────────────────────────
 // FOOTER, PAGE NUMBERING & DYNAMIC TOC COMPILATION

@@ -37,7 +37,8 @@ const DOC_SECTIONS = [
   { id: 'future-enhancements', label: '25. Future Enhancements' },
   { id: 'challenges-faced', label: '26. Challenges Faced' },
   { id: 'conclusion', label: '27. Conclusion' },
-  { id: 'project-screenshots', label: '28. Project Screenshots Guide' }
+  { id: 'project-screenshots', label: '28. Project Screenshots Guide' },
+  { id: 'access-credentials', label: '29. Access Credentials' }
 ];
 
 export default function TechnicalDocs() {
@@ -2367,6 +2368,48 @@ const pandits = await Pandit.find(query).populate('userId', 'name email phone');
               <ImageCard title="Booking Details" caption="Detailed page displaying addresses, check sheets, and access coordinates." gradientClass="from-saffron-500/10 to-gold-500/10" />
               <ImageCard title="Chat System" caption="Integrated messaging interface featuring unread counters and read status indicators." gradientClass="from-gold-500/10 to-crimson-500/10" />
               <ImageCard title="Mobile View" caption="Fully responsive layout optimized for touch screens and mobile web browsers." isMobile={true} gradientClass="from-crimson-500/10 to-saffron-500/10" />
+            </div>
+          </section>
+
+          {/* 29. Access Credentials */}
+          <section id="access-credentials" className="scroll-mt-24">
+            <div className="flex items-center gap-3 mb-6 border-b border-light-border dark:border-dark-border pb-3">
+              <span className="p-2.5 rounded-xl bg-saffron-500/10 text-saffron-600 dark:text-saffron-400">
+                <ShieldCheck size={22} />
+              </span>
+              <h2 className="text-2xl font-bold text-stone-900 dark:text-white font-display">
+                29. Access Credentials
+              </h2>
+            </div>
+
+            <div className="p-6 rounded-2xl border-2 border-saffron-500/30 bg-gradient-to-br from-saffron-500/10 via-gold-500/5 to-crimson-500/5 shadow-lg shadow-saffron-500/10">
+              <div className="flex flex-col gap-4 mb-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-saffron-600 dark:text-saffron-400">
+                  Important Login Details
+                </p>
+                <p className="text-sm text-stone-700 dark:text-stone-300">
+                  Keep these credentials for reference. The pandit email uses the format <span className="font-semibold">pandit(number)@pujaconnect.com</span>, where any number from 1 to 500 can replace the brackets. Example: <span className="font-semibold">pandit500@pujaconnect.com</span>.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-5 rounded-2xl bg-white/80 dark:bg-dark-surface/80 border border-saffron-500/20 backdrop-blur-sm">
+                  <p className="text-xs font-bold uppercase tracking-widest text-saffron-600 dark:text-saffron-400 mb-3">Admin Account</p>
+                  <div className="space-y-2 text-sm text-stone-700 dark:text-stone-300">
+                    <p><span className="font-semibold">Mail:</span> admin@pujaconnect.com</p>
+                    <p><span className="font-semibold">Password:</span> Admin@123</p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-white/80 dark:bg-dark-surface/80 border border-gold-500/20 backdrop-blur-sm">
+                  <p className="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400 mb-3">Pandit Account</p>
+                  <div className="space-y-2 text-sm text-stone-700 dark:text-stone-300">
+                    <p><span className="font-semibold">Mail:</span> pandit(number)@pujaconnect.com</p>
+                    <p><span className="font-semibold">Password:</span> Pandit@123</p>
+                    <p className="text-xs text-stone-500 dark:text-stone-400">Example: pandit500@pujaconnect.com</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
